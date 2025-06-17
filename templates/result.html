@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-indigo-200 min-h-screen flex items-center justify-center">
+    <div class="bg-white rounded-2xl shadow-lg p-8 max-w-lg text-center">
+        <h1 class="text-3xl font-bold text-indigo-700 mb-6">Prediction Result</h1>
+        <img src="{{ img_path }}" alt="Uploaded Dog Image" class="rounded-xl w-full h-auto mb-6 shadow-md">
+        <p class="text-lg text-gray-700 font-medium">We think this dog is a:</p>
+        <h2 class="text-2xl font-bold text-indigo-800 mt-2">{{ dog_name }}</h2>
+        <a href="/" class="inline-block mt-6 bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition duration-200">Try Another</a>
+    </div>
+</body>
+</html>

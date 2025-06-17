@@ -1,0 +1,20 @@
+# Ignore model weights
+model/*.h5
+model/*.pth
+model/*.pt
+model/*.pkl
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebooks Checkpoints (if any)
+.ipynb_checkpoints
+
+# Environment files
+.env
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
