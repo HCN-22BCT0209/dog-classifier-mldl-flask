@@ -125,7 +125,7 @@ dogsorted=['n02085620-Chihuahua',
  'n02116738-African_hunting_dog']
 app = Flask(__name__)
 IMG_SIZE = (331, 331)
-MODEL_PATH = r"model/nasnet_best_model.h5"
+MODEL_PATH = r"model/nasnet_globalavgpool_best_model.h5"
 model = tf.keras.models.load_model(MODEL_PATH)
 @app.route('/')
 def home():

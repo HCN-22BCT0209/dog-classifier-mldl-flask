@@ -1,49 +1,26 @@
-# Dog Classifier Flask App
+## Model Variants
 
-A web-based dog breed classification tool built using **TensorFlow** and **Flask**.  
-The model is trained on 120+ dog breeds using **NASNetLarge** and predicts the breed of an uploaded image.
+This project provides two NASNetLarge-based models:
 
----
-
-## Features
-
-- Upload a dog image and get instant breed prediction
-- Classifies among 120+ dog breeds
-- Deep learning powered (NASNetLarge backbone)
-- Simple, clean Flask-based web UI
-- Custom-trained model provided via external link
+1. **Flatten Variant** – Uses a `Flatten()` layer before the final Dense layer  
+2. **Global Average Pooling Variant** – Uses a `GlobalAveragePooling2D()` layer for reduced size and better generalization
 
 ---
 
-## Model
+### Download Trained Models
 
-This project uses a fine-tuned NASNetLarge model trained via transfer learning.
+| Model Type               | Download Link                                                                                      | Suggested Path                            |
+|--------------------------|----------------------------------------------------------------------------------------------------|--------------------------------------------|
+| Flatten Variant          | [nasnet_flatten_best_model.h5](https://drive.google.com/file/d/1Ig2W2miWW2k_V98Jjh2GbBd74lePeOiW/view?usp=drive_link)           | /model/nasnet_flatten_best_model.h5        |
+| GlobalAvgPooling Variant | [nasnet_globalavgpool_best_model.h5](https://drive.google.com/file/d/14F6iP_naBj4FB13dIeab5yZgH69GkIAn/view?usp=drive_link)     | /model/nasnet_globalavgpool_best_model.h5  |
 
- **Download the trained model file:**
-
-🔗 [Download `nasnet_best_model.h5`](https://drive.google.com/file/d/1gFEzCJUA5OklZYMFw6U0c-DQMazp6lRN/view?usp=sharing)
-
-> After downloading, place the file here:
-
-/model/nasnet_best_model.h5
-
-
-> Note: If the `model/` folder doesn't exist, create it manually.
+> Note: If the `/model/` folder doesn’t exist, please create it manually before placing the `.h5` files.
 
 ---
 
-## Training Notebook
+### Training Notebook
 
-Training was performed on Google Colab.  
-You can view or modify the training notebook here:
+Training for both variants was performed on Google Colab using transfer learning.  
+You can view or edit the notebook here:
 
-[`training_notebook/dog_classifier_training.ipynb`](training_notebook/dog_classifier_training.ipynb)
-
----
-
-## ⚙️ Requirements
-
-You can install dependencies using `requirements.txt` (coming soon), or manually with:
-
-```bash
-pip install flask tensorflow numpy
+`training_notebook/dog_classifier_training.ipynb`
